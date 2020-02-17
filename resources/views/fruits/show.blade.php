@@ -9,7 +9,8 @@
 
     <section class="container">
 
-        <h2 class="text-center">Dettagli frutto</h2>
+        <h2 class="d-inline-block mb-5">Dettagli frutto</h2>
+        <a class="btn btn-info float-right" href="{{ route('fruits.index') }}">Back</a>
         <div class="d-flex">
 
             <div class="card" style="width: 18rem;">
