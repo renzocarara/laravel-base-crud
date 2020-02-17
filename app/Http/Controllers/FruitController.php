@@ -69,6 +69,8 @@ class FruitController extends Controller
     public function show($id)
     {
         //
+        $single_fruit=Fruit::where('id', $id) -> first();
+        return view('fruits.show', ['fruit_details' => $single_fruit]);
     }
 
     /**
