@@ -14,9 +14,12 @@
 
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $fruit_details->name }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ $fruit_details->type }}</h6>
-                    <p class="card-text"> {{ $fruit_details->weight }} gr.</p>
+                    <h5 class="card-title">ID frutto: {{ $fruit_details->id }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Nome: {{ $fruit_details->name }}</h6>
+                    <p class="card-text">Varietà: <strong>{{ $fruit_details->type }}</strong></p>
+                    <p class="card-text">Peso: <strong>{{ $fruit_details->weight }} gr.</strong></p>
+                    <p class="card-text">inserito: <strong>{{ $fruit_details->created_at }}</strong></p>
+                    <p class="card-text">aggiornato: <strong>{{ $fruit_details->updated_at }}</strong></p>
                     {{-- <a href="#" class="card-link"></a> --}}
                     {{-- <a href="#" class="card-link"></a> --}}
                 </div>

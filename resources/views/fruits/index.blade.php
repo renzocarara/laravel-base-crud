@@ -30,12 +30,17 @@
                     <td>{{ $fruit->weight }}</td>
                     <td>{{ $fruit->type }}</td>
                     <td>
-                        <a href="{{ route('fruits.show', ['fruit' => $fruit->id]) }}" class="btn btn-info">
-                            Dettagli frutto
+                        <a href="{{ route('fruits.show', ['fruit' => $fruit->id]) }}" class="btn btn-dark">
+                            Dettagli
                         </a>
-                        {{-- <a href="{{ route('fruits.edit', ['fruit' => $fruit->id]) }}" class="btn btn-info">
-                        Modifica frutto
-                        </a> --}}
+                        <a href="{{ route('fruits.edit', ['fruit' => $fruit->id]) }}" class="btn btn-secondary">
+                            Modifica
+                        </a>
+                        <form id="delete-btn" action="{{ route('fruits.destroy', ['fruit' => $fruit->id]) }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <input class="btn btn-danger" type="submit" value="Elimina">
+                        </form>
                     </td>
                 </tr>
             </tbody>
