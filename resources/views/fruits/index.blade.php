@@ -7,9 +7,9 @@
 
 <main>
 
-    <section class="container">
-        <h1 class="text-center"><strong>Gestione frutta</strong></h1>
-        <a class="btn btn-info" href="{{ route('fruits.create') }}">Crea nuovo frutto</a>
+    <section class="container clearfix">
+        <h1 class="d-inline"><strong>Gestione frutta</strong></h1>
+        <a class="btn btn-info float-right" href="{{ route('fruits.create') }}">Crea nuovo frutto</a>
         <table class="table table-striped">
             <thead>
                 <tr>

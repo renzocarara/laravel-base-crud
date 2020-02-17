@@ -16,7 +16,7 @@
             <a href="#" class="alert-link">ATTENZIONE: i dati verranno cancellati definitivamente</a>
         </div>
 
-        <form id="delete-btn" action="{{ route('fruits.destroy', ['fruit' => $fruit_to_be_removed]) }}" method="post">
+        <form class="d-inline" action="{{ route('fruits.destroy', ['fruit' => $fruit_to_be_removed]) }}" method="post">
             @csrf
             @method('delete')
             <input class="btn btn-danger" type="submit" value="Conferma">
