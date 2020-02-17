@@ -12,3 +12,4 @@
 */
 
 Route::resource('/fruits', 'FruitController'); // 'slug' , controller
+Route::get('/fruits/{fruit}/confirm_destroy', 'FruitController@confirm_destroy')->name('fruits.confirm_destroy'); // 'slug' , controller@method

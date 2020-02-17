@@ -1,14 +1,13 @@
 @extends('layouts.view_structure')
 
 {{-- imposto il titolo della pagina --}}
-@section('page-title', "Frutivendolo - Home")
+@section('page-title', "Fruttivendolo - Home")
 
 @section('content')
 
 <main>
 
     <section class="container">
-
         <h1 class="text-center"><strong>Gestione frutta</strong></h1>
         <a class="btn btn-info" href="{{ route('fruits.create') }}">Crea nuovo frutto</a>
         <table class="table table-striped">
@@ -36,11 +35,9 @@
                         <a href="{{ route('fruits.edit', ['fruit' => $fruit->id]) }}" class="btn btn-secondary">
                             Modifica
                         </a>
-                        <form id="delete-btn" action="{{ route('fruits.destroy', ['fruit' => $fruit->id]) }}" method="post">
-                            @csrf
-                            @method('delete')
-                            <input class="btn btn-danger" type="submit" value="Elimina">
-                        </form>
+                        <a href="{{ route('fruits.confirm_destroy', ['fruit' => $fruit->id]) }}" class="btn btn-danger">
+                            Elimina
+                        </a>
                     </td>
                 </tr>
             </tbody>

@@ -159,4 +159,17 @@ class FruitController extends Controller
         $fruit->delete();
         return redirect()->route('fruits.index');
     }
+
+    /**
+     * Ask confirmation to remove the specified resource from storage.
+     *
+     */
+    public function confirm_destroy(Fruit $fruit)
+    {
+
+        //
+        // NOTA: anche qui come per la uso la DEPENDENCY INJECTION
+
+        return view('fruits.confirm_destroy',  ['fruit_to_be_removed' => $fruit]);
+    }
 }
