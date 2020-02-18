@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// uso la classe Fruit
 use App\Fruit;
 
 class FruitController extends Controller
@@ -16,7 +17,7 @@ class FruitController extends Controller
     {
         //recupero tutti i dati dal DB
         $all_fruits = Fruit::all();
-        // ritorno la view 'index'
+        // ritorno la view 'index' passandogli i dati letti da DB
         return view('fruits.index', ['all_fruits' => $all_fruits]);
     }
 
@@ -27,7 +28,7 @@ class FruitController extends Controller
      */
     public function create()
     {
-        //
+        // ritorno semplicemente la view 'create'
         return view('fruits.create');
     }
 
@@ -46,7 +47,8 @@ class FruitController extends Controller
 
         // metto i dati ricevuti tramite il parametro $request in una variabile
         $form_data_received=$request->all();
-        // creo un nuovo oggetto di classe Cloth, da scrivere poi nel DB
+
+        // creo un nuovo oggetto di classe Fruit, da scrivere poi nel DB
         $new_fruit = new Fruit();
 
         // valorizzo il nuovo oggetto con i dati ricevuti
@@ -133,9 +135,9 @@ class FruitController extends Controller
 
         // NOTA: anche qui come per la show() e la edit(), uso la DEPENDENCY INJECTION,
         // sul secondo parametro in ingresso alla funzione
-        // ottengo l'oggetto che cerco, invocando questa funzione passandogli l'id
+        // ottengo l'oggetto che cerco, invocando questa funzione passandogli solamente l'id
 
-        // inserisco i dati ricevuti tramite il parametro $request, in una variabile
+        // inserisco  in una variabile i dati ricevuti tramite il parametro $request (sono i dati raccolti dal FORM)
         $form_data = $request->all();
         // aggiorno il record  del DB (identificato dall'id che ho passato al momento dell'invocazione)
         $fruit->update($form_data);
@@ -166,8 +168,7 @@ class FruitController extends Controller
      */
     public function confirm_destroy(Fruit $fruit)
     {
-
-        //
+        // questa funzione richiama una view che chiede all'utente di confermare la cancellazione
         // NOTA: anche qui come per la uso la DEPENDENCY INJECTION
 
         return view('fruits.confirm_destroy',  ['fruit_to_be_removed' => $fruit]);

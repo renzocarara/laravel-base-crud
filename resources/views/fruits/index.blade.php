@@ -20,10 +20,10 @@
                     <th scope="col">operations</th>
                 </tr>
             </thead>
+            {{-- scorro la collection passata in ingresso a questa view --}}
             @forelse ($all_fruits as $fruit)
             <tbody>
                 <tr>
-                    {{-- <th scope="row">ID</th> --}}
                     <td>{{ $fruit->id }}</td>
                     <td>{{ $fruit->name }}</td>
                     <td>{{ $fruit->weight }}</td>

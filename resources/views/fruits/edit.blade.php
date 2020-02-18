@@ -12,10 +12,15 @@
         <h2 class="text-center">Modifica frutto</h2>
         <div class="d-flex">
             {{-- al submit chiamo la route 'update' che non corrisponde ad una view da visualizzare, --}}
-            {{-- ma è solo del codice che elabora i dati del form e aggiornerà il DB con i dati del form --}}
+            {{-- ma è solo del codice che elabora i dati del form e aggiornerà il DB --}}
             <form method="post" action="{{ route('fruits.update', ['fruit' => $fruit_to_be_edited->id]) }}">
-                @csrf <!-- questo token è sempre necessario per i form -->
-                @method('put') <!-- questo ''Blade directive' è necessaria per i form -->
+                <!-- questo token è sempre necessario per i form -->
+                @csrf
+                {{-- Form Method Spoofing --}}
+                <!-- questa 'Blade directive' è necessaria per specificargli di trattare i dati di questo
+                 form con il metodo 'put' che nei form HTML non è previsto -->
+                @method('put')
+
                 <div class="form-group">
                     <label for="name-id">Nome:</label>
                     <input type="text" class="form-control" id="name-id" name="name" value="{{ $fruit_to_be_edited->name }}" placeholder="nome del frutto">
