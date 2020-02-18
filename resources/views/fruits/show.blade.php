@@ -22,7 +22,7 @@
                     <p class="card-text">inserito: <strong>{{ $fruit_details->created_at }}</strong></p>
                     <p class="card-text">aggiornato: <strong>{{ $fruit_details->updated_at }}</strong></p>
                     <a href="{{ route('fruits.edit', ['fruit' => $fruit_details->id]) }}" class="card-link">Modifica</a>
-                    <a href="{{ route('fruits.confirm_destroy', ['fruit' => $fruit_details->id]) }}" class="card-link">Elimina</a>
+                    <a href="{{ route('fruits.confirm_destroy', ['fruit' => $fruit_details->id]) }}" class="card-link text-danger">Elimina</a>
                     </a>
                 </div>
             </div>
