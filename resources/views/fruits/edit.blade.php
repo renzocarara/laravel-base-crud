@@ -9,7 +9,8 @@
 
     <section class="container">
 
-        <h2 class="text-center">Modifica frutto</h2>
+        <h2 class="d-inline-block mb-5">Modifica frutto</h2>
+        <a class="btn btn-info float-right" href="{{ route('fruits.index') }}">Back</a>
         <div class="d-flex">
             {{-- al submit chiamo la route 'update' che non corrisponde ad una view da visualizzare, --}}
             {{-- ma è solo del codice che elabora i dati del form e aggiornerà il DB --}}
@@ -35,6 +36,7 @@
                 </div>
                 <button type="submit" class="btn btn-success">Modifica</button>
                 <button type="reset" class="btn btn-warning">Reset</button>
+
             </form>
 
         </div>
