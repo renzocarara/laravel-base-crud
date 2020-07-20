@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "bootstrap": "^4.4.1",
-        "jquery": "^3.5.0"
+        "jquery": "^3.5.0",
+        "websocket-extensions": "^0.1.4"
     }
 }
