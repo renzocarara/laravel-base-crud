@@ -22,6 +22,7 @@
     "dependencies": {
         "bootstrap": "^4.4.1",
         "jquery": "^3.5.0",
+        "serialize-javascript": "^4.0.0",
         "websocket-extensions": "^0.1.4"
     }
 }
