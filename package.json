@@ -23,7 +23,7 @@
         "bootstrap": "^4.4.1",
         "jquery": "^3.5.0",
         "node-forge": "^0.10.0",
-        "object-path": "^0.11.5",
+        "object-path": "^0.11.6",
         "serialize-javascript": "^4.0.0",
         "websocket-extensions": "^0.1.4",
         "yargs-parser": "^20.0.0"
